@@ -1,1 +1,7 @@
 inventory-service/docker/mysql/data/
+
+# Ignore MySQL socket files
+*.sock
+
+# Ignore data directories
+volume-data/
