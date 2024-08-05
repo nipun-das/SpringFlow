@@ -23,20 +23,21 @@ public class ProductService {
         Product product = Product.builder()
                 .name(productRequest.name())
                 .description(productRequest.description())
+                .skuCode(productRequest.skuCode())
                 .price(productRequest.price())
                 .build();
 
         productRepository.save(product);
         log.info("PRODUCT CREATED SUCCESSFULLY!");
 
-        return new ProductResponse(product.getId(), product.getName(),product.getDescription(), product.getPrice());
+        return new ProductResponse(product.getId(), product.getName(),product.getDescription(), product.getSkuCode(),product.getPrice());
     }
 
     public List<ProductResponse> getAllProducts() {
         // to map list of product object to productresponse object
         return productRepository.findAll()
                 .stream()
-                .map(product -> new ProductResponse(product.getId(), product.getName(),product.getDescription(), product.getPrice()))
+                .map(product -> new ProductResponse(product.getId(), product.getName(),product.getDescription(), product.getSkuCode(), product.getPrice()))
                 .toList();
     }
 }

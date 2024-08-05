@@ -47,7 +47,7 @@ export class HomePageComponent implements OnInit {
     this.router.navigateByUrl('/add-product');
   }
 
-  orderProduct(product: Product, quantity: string) {
+  orderProduct(product: Product, quantity: String) {
 
     this.oidcSecurityService.userData$.subscribe(result => {
       const userDetails = {
@@ -55,6 +55,7 @@ export class HomePageComponent implements OnInit {
         firstName: result.userData.firstName,
         lastName: result.userData.lastName
       };
+
 
       if(!quantity) {
         this.orderFailed = true;
