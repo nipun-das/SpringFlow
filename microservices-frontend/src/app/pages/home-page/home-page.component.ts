@@ -56,7 +56,6 @@ export class HomePageComponent implements OnInit {
         lastName: result.userData.lastName
       };
 
-
       if(!quantity) {
         this.orderFailed = true;
         this.orderSuccess = false;
