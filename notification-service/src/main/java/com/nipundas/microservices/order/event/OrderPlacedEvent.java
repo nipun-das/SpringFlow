@@ -1,4 +1,4 @@
-package com.nipundas.microservices.order.order.event;
+package com.nipundas.microservices.order.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

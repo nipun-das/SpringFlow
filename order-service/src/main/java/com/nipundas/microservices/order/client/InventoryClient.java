@@ -1,4 +1,4 @@
-package com.nipundas.microservices.client;
+package com.nipundas.microservices.order.client;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;

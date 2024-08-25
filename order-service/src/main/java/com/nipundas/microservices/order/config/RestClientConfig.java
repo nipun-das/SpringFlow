@@ -1,6 +1,6 @@
-package com.nipundas.microservices.config;
+package com.nipundas.microservices.order.config;
 
-import com.nipundas.microservices.client.InventoryClient;
+import com.nipundas.microservices.order.client.InventoryClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.ClientHttpRequestFactories;
 import org.springframework.boot.web.client.ClientHttpRequestFactorySettings;

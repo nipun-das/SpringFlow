@@ -1,10 +1,10 @@
-package com.nipundas.microservices.service;
+package com.nipundas.microservices.order.service;
 
-import com.nipundas.microservices.client.InventoryClient;
-import com.nipundas.microservices.dto.OrderRequest;
-import com.nipundas.microservices.event.OrderPlacedEvent;
-import com.nipundas.microservices.model.Order;
-import com.nipundas.microservices.repository.OrderRepository;
+import com.nipundas.microservices.order.client.InventoryClient;
+import com.nipundas.microservices.order.dto.OrderRequest;
+import com.nipundas.microservices.order.event.OrderPlacedEvent;
+import com.nipundas.microservices.order.model.Order;
+import com.nipundas.microservices.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -35,7 +35,11 @@ public class OrderService {
             orderRepository.save(order);
 
 
-            OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(),orderRequest.userDetails().email());
+            OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent();
+            orderPlacedEvent.setOrderNumber(order.getOrderNumber());
+            orderPlacedEvent.setEmail(orderRequest.userDetails().email());
+            orderPlacedEvent.setFirstName(orderRequest.userDetails().firstName());
+            orderPlacedEvent.setLastName(orderRequest.userDetails().lastName());
             log.info("Start sending orderPlacedEvent to kafkaTopic order-placed",orderPlacedEvent);
             kafkaTemplate.send("order-placed",orderPlacedEvent);
             log.info("End sending orderPlacedEvent to kafkaTopic order-placed",orderPlacedEvent);

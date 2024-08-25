@@ -1,8 +1,8 @@
-package com.nipundas.microservices.controller;
+package com.nipundas.microservices.order.controller;
 
 
-import com.nipundas.microservices.dto.OrderRequest;
-import com.nipundas.microservices.service.OrderService;
+import com.nipundas.microservices.order.dto.OrderRequest;
+import com.nipundas.microservices.order.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

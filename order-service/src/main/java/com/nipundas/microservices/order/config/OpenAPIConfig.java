@@ -1,4 +1,4 @@
-package com.nipundas.microservices.config;
+package com.nipundas.microservices.order.config;
 
 
 import io.swagger.v3.oas.models.ExternalDocumentation;

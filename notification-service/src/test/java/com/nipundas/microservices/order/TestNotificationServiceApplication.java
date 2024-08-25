@@ -1,5 +1,6 @@
-package com.nipundas.microservices;
+package com.nipundas.microservices.order;
 
+import com.nipundas.microservices.NotificationServiceApplication;
 import org.springframework.boot.SpringApplication;
 
 public class TestNotificationServiceApplication {

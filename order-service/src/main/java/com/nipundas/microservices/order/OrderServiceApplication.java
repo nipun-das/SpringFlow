@@ -1,4 +1,4 @@
-package com.nipundas.microservices;
+package com.nipundas.microservices.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

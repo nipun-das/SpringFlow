@@ -1,4 +1,4 @@
-package com.nipundas.microservices.model;
+package com.nipundas.microservices.order.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

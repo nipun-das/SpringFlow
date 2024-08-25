@@ -1,4 +1,4 @@
-package com.nipundas.microservices.dto;
+package com.nipundas.microservices.order.dto;
 
 import java.math.BigDecimal;
 

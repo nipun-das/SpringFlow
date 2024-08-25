@@ -1,0 +1,12 @@
+com\nipundas\microservices\order\config\RestClientConfig.class
+com\nipundas\microservices\order\dto\OrderRequest.class
+com\nipundas\microservices\order\controller\OrderController.class
+com\nipundas\microservices\order\OrderServiceApplication.class
+com\nipundas\microservices\order\event\OrderPlacedEvent$Builder.class
+com\nipundas\microservices\order\config\OpenAPIConfig.class
+com\nipundas\microservices\order\repository\OrderRepository.class
+com\nipundas\microservices\order\event\OrderPlacedEvent.class
+com\nipundas\microservices\order\model\Order.class
+com\nipundas\microservices\order\service\OrderService.class
+com\nipundas\microservices\order\dto\OrderRequest$UserDetails.class
+com\nipundas\microservices\order\client\InventoryClient.class

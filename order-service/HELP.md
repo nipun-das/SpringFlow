@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.nipundas.order-service' is invalid and this project uses 'com.nipundas.order_service' instead.
+* The original package name 'com.nipundas.order-service' is invalid and this project uses 'com.nipundas.microservices' instead.
 
 # Getting Started
 

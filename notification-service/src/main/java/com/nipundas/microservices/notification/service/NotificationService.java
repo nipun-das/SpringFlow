@@ -1,8 +1,6 @@
 package com.nipundas.microservices.notification.service;
 
-
-
-//import com.nipundas.microservices.order.event.OrderPlacedEvent;
+import com.nipundas.microservices.order.event.OrderPlacedEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -19,8 +17,8 @@ public class NotificationService {
 
     private final JavaMailSender javaMailSender;
 
-    @KafkaListener(topics="order-placed",groupId = "notification-service")
-    public void listen(com.nipundas.microservices.order.event.OrderPlacedEvent orderPlacedEvent){
+    @KafkaListener(topics="order-placed")
+    public void listen(OrderPlacedEvent orderPlacedEvent){
         log.info("Got message from order-placed kafkaTopic ",orderPlacedEvent);
 
         //sending mail
@@ -51,4 +49,5 @@ public class NotificationService {
             throw new RuntimeException("Exception occurred when sending mail to springshop@email.com", e);
         }
     }
+
 }
