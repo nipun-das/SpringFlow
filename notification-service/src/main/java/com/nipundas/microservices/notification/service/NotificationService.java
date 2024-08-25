@@ -31,14 +31,14 @@ public class NotificationService {
                     orderPlacedEvent.getOrderNumber()));
 
             messageHelper.setText(String.format("""
-                            Hi,
+                            Hi %s %s,
                             Your order with order number %s is now placed successfully.
 
                             Best Regards
                             Product Shop
                             """,
-//                    orderPlacedEvent.getFirstName().toString(),
-//                    orderPlacedEvent.getLastName().toString(),
+                    orderPlacedEvent.getFirstName().toString(),
+                    orderPlacedEvent.getLastName().toString(),
                     orderPlacedEvent.getOrderNumber()));
         };
         try {
