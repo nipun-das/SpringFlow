@@ -55,6 +55,9 @@ export class HomePageComponent implements OnInit {
         firstName: result.userData.firstName,
         lastName: result.userData.lastName
       };
+      console.log("email : ",result.userData.email);
+      console.log("firstname : ",userDetails.firstName);
+      console.log("firstname : ",result.userData.firstName);
 
       if(!quantity) {
         this.orderFailed = true;

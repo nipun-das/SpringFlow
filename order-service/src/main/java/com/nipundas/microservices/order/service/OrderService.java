@@ -31,6 +31,7 @@ public class OrderService {
             order.setPrice(orderRequest.price().multiply(BigDecimal.valueOf(orderRequest.quantity())));
             order.setSkuCode(orderRequest.skuCode());
             order.setQuantity(orderRequest.quantity());
+
             orderRepository.save(order);
 
             // Send the message to Kafka Topic
@@ -39,6 +40,7 @@ public class OrderService {
             orderPlacedEvent.setEmail(orderRequest.userDetails().email());
             orderPlacedEvent.setFirstName(orderRequest.userDetails().firstName());
             orderPlacedEvent.setLastName(orderRequest.userDetails().lastName());
+            System.out.println(orderPlacedEvent.getFirstName());
             log.info("Start - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
             kafkaTemplate.send("order-placed", orderPlacedEvent);
             log.info("End - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
