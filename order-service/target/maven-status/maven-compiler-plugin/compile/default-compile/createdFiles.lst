@@ -5,6 +5,7 @@ com\nipundas\microservices\order\OrderServiceApplication.class
 com\nipundas\microservices\order\event\OrderPlacedEvent$Builder.class
 com\nipundas\microservices\order\config\OpenAPIConfig.class
 com\nipundas\microservices\order\repository\OrderRepository.class
+com\nipundas\microservices\order\config\ObservabilityConfig.class
 com\nipundas\microservices\order\event\OrderPlacedEvent.class
 com\nipundas\microservices\order\model\Order.class
 com\nipundas\microservices\order\service\OrderService.class
