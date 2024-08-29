@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   private readonly oidcSecurityService = inject(OidcSecurityService);
   isAuthenticated = false;
   username = "";
+  
 
   ngOnInit(): void {
     this.oidcSecurityService.isAuthenticated$.subscribe(
