@@ -15,6 +15,11 @@ spec:
       containers:
         - name: api-gateway
           image: nipundas10/new-api-gateway:latest
+          resources:
+            requests:
+              memory: "512Mi"  # Increase the requested memory
+            limits:
+              memory: "1Gi"    # Set a higher memory limit
           ports:
             - containerPort: 9000
           env:

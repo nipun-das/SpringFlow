@@ -15,6 +15,11 @@ spec:
       containers:
         - name: order-service
           image: nipundas10/new-order-service:latest
+          resources:
+            requests:
+              memory: "512Mi"  # Increase the requested memory
+            limits:
+              memory: "1Gi"    # Set a higher memory limit
           env:
             - name: SPRING_KAFKA_BOOTSTRAP-SERVERS
               valueFrom:
